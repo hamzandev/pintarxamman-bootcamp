@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Form - HamzanDev</title>
+    <link rel="stylesheet" href="assignment-5.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <form id="myForm" action="" class="form-wrapper" multipart="formdata">
+          <h1>
+            <span class="star">⭐</span>
+            Silahkan isi Form berikut
+            <span class="star">⭐</span>
+          </h1>
+          <div class="form">
+            <div class="form-group">
+              <label for="nama">Nama Kamu</label>
+              <input type="text" name="nama" id="nama" placeholder="John Doe" />
+            </div>
+            <div class="form-group">
+              <label for="usia">Usia Kamu</label>
+              <input
+                type="number"
+                name="usia"
+                id="usia"
+                placeholder="Masukkan Umur kamu"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Alamat Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="john@doe.com"
+              />
+            </div>
+            <div class="form-group">
+              <label for="telepon">No HP</label>
+              <input
+                type="tel"
+                placeholder="08xxxxxxxxx"
+                name="telepon"
+                id="telepon"
+              />
+            </div>
+            <div class="form-group">
+              <label for="telepon">Gender Kamu</label>
+              <div class="flex-wrapper">
+                <input
+                  type="radio"
+                  checked
+                  name="gender"
+                  id="male"
+                  value="male"
+                />
+                <label for="male">Laki-laki</label>
+                <input type="radio" name="gender" id="female" value="female" />
+                <label for="female">Perempuan</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="agama">Agama</label>
+              <select name="agama" id="agama">
+                <option value="0">-- Pilih Agama Kamu --</option>
+                <option value="islam">Islam</option>
+                <option value="kristen">Kristen</option>
+                <option value="katolik">Katolik</option>
+                <option value="hindu">Hindu</option>
+                <option value="budha">Budha</option>
+                <option value="panji_gumilang" disabled>
+                  Panji Gumilang (uncategorized) 🤷‍♀️
+                </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="tanggal_lahir">Tanggal Lahir</label>
+              <input
+                type="date"
+                name="tanggal_lahir"
+                id="tanggal_lahir"
+                placeholder="Masukkan Umur kamu"
+              />
+            </div>
+            <div class="form-group">
+              <label for="jam_masuk">Jam Masuk Kerja</label>
+              <input type="time" name="jam_masuk" id="jam_masuk" />
+            </div>
+            <div class="form-group">
+              <label for="jam_pulang">Jam Pulang Kerja</label>
+              <input type="time" name="jam_pulang" id="jam_pulang" />
+            </div>
+            <div class="form-group">
+              <label for="cool">Seberapa keren kamu?</label>
+              <div class="flex-wrapper">
+                😢 <input type="range" id="cool" value="0" /> 😎
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="hobbi">Hobbi Kamu?</label>
+              <div class="flex-wrapper">
+                <input type="checkbox" id="game" value="game" />
+                <label for="game">Gaming</label> <br />
+                <input type="checkbox" id="sepak_bola" value="sepak_bola" />
+                <label for="sepak_bola">Sepak Bola</label> <br />
+                <input type="checkbox" id="catur" value="catur" />
+                <label for="catur">Catur</label> <br />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="warna">Warna Kesukaan kamu</label>
+              <div class="flex-wrapper">
+                <input type="color" name="warna" id="warna" value="#ff600a" />
+              </div>
+            </div>
+            <div class="form-group" id="pesan_wrapper">
+              <label for="pesan">Pesan Kamu</label>
+              <textarea
+                name="pesan"
+                id="pesan"
+                cols="30"
+                rows="10"
+                placeholder="Tulis pesan kamu untuk saya 😄"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="foto">Foto Kamu</label>
+              <input type="file" name="foto" id="foto" />
+            </div>
+          </div>
+          <div class="flex">
+            <button type="reset">Reset</button>
+            <button type="submit">Simpan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal for displaying data -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModalBtn" style="float: right; cursor: pointer"
+          >&times;</span
+        >
+        <h2>Data Input:</h2>
+        <div id="tableContainer">
+          <!-- Table will be inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form - HamzanDev</title>
+  </head>
+  <body>
+    <center>
+      <h1>Feel free if u want to fill this form bellow 😄</h1>
+      <form action="process.php">
+        <table cellpadding="10" border="1">
+          <tr>
+            <th align="left"><label for="nama">Nama Kamu</label></th>
+            <td>
+              <input type="text" name="nama" id="nama" placeholder="John Doe" />
+            </td>
+          </tr>
+          <tr>
+            <th align="left"><label for="usia">Usia Kamu</label></th>
+            <td>
+              <input
+                type="number"
+                name="usia"
+                id="usia"
+                placeholder="Masukkan Umur kamu"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th align="left"><label for="email">Email</label></th>
+            <td>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="john@doe.com"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th align="left"><label for="telepon">Nomor Telepon</label></th>
+            <td>
+              <input
+                type="tel"
+                placeholder="08xxxxxxxxx"
+                name="telepon"
+                id="telepon"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th align="left"><label>Gender Kamu</label></th>
+            <td>
+              <input type="radio" name="gender" id="male" value="male" />
+              <label for="male">Laki-laki</label>
+              <input type="radio" name="gender" id="female" value="female" />
+              <label for="female">Perempuan</label>
+            </td>
+          </tr>
+          <tr>
+            <th align="left"><label for="agama">Agama</label></th>
+            <td>
+              <select name="agama" id="agama">
+                <option value="0">-- Pilih Agama Kamu --</option>
+                <option value="islam">Islam</option>
+                <option value="kristen">Kristen</option>
+                <option value="katolik">Katolik</option>
+                <option value="hindu">Hindu</option>
+                <option value="budha">Budha</option>
+                <option value="panji_gumilang" disabled>
+                  Panji Gumilang (uncategorized) 🤷‍♀️
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th align="left">
+              <label for="tanggal_lahir">Tanggal Lahir</label>
+            </th>
+            <td>
+              <input
+                type="date"
+                name="tanggal_lahir"
+                id="tanggal_lahir"
+                placeholder="Masukkan Umur kamu"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th align="left"><label for="jam_masuk">Jam Kerja</label></th>
+            <td>
+              <span>Dari </span>
+              <input type="time" name="jam_masuk" id="jam_masuk" />
+              <span>sampai </span>
+              <input type="time" name="jam_selesai" id="jam_selesai" />
+            </td>
+          </tr>
+          <tr>
+            <th align="left"><label for="cool">Seberapa keren kamu?</label></th>
+            <td>😢 <input type="range" id="cool" value="0" /> 😎</td>
+          </tr>
+          <tr>
+            <th align="left"><label>Hobby kamu?</label></th>
+            <td>
+              <input type="checkbox" id="game" value="game" />
+              <label for="game">Gaming</label> <br />
+              <input type="checkbox" id="sepak_bola" value="sepak_bola" />
+              <label for="sepak_bola">Sepak Bola</label> <br />
+              <input type="checkbox" id="catur" value="catur" />
+              <label for="catur">Catur</label> <br />
+            </td>
+          </tr>
+          <tr>
+            <th align="left"><label for="warna">Warna Kesukaan kamu</label></th>
+            <td>
+              <input type="color" name="warna" id="warna" value="#ff600a" />
+            </td>
+          </tr>
+          <tr>
+            <th align="left"><label for="foto">Foto Kamu</label></th>
+            <td><input type="file" name="foto" id="foto" /></td>
+          </tr>
+          <tr>
+            <th align="left"><label for="pesan">Pesan Kamu</label></th>
+            <td>
+              <textarea
+                name="pesan"
+                id="pesan"
+                cols="30"
+                rows="10"
+                placeholder="Tulis pesan kamu untuk saya 😄"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <!-- <td></td> -->
+            <td colspan="2" align="right">
+              <button type="submit">Kirim</button>
+              <button type="reset">Reset</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </center>
+  </body>
+</html>

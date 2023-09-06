@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 200ms;
+}
+
+body {
+  /* background-image: linear-gradient(rgb(202, 228, 255), rgb(238, 238, 238)); */
+  background-image: url("https://images.unsplash.com/photo-1560036043-1a6b17791807?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGF0dGVybiUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  margin: 0 2rem;
+  padding: 3rem 0;
+}
+
+.container h1 {
+  text-align: center;
+  margin-block: 2rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: rgb(40, 40, 40);
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.form-wrapper {
+  padding: 2rem 0;
+  box-shadow: rgb(130, 130, 130) 0 0 20px;
+  background: rgba(255, 255, 255, 0.74);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+input[type="file"] {
+  background: white;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 1.5rem;
+  justify-content: end;
+}
+
+button {
+  padding: 0.5rem 1.3rem;
+  color: white;
+  border: 0;
+  box-shadow: rgb(231, 231, 231) 0 0 2px;
+  border-radius: 0.5rem;
+  transition: all 200ms;
+}
+
+button:hover {
+  opacity: 90%;
+}
+
+button[type="reset"] {
+  background: rgb(232, 57, 51);
+}
+button[type="submit"] {
+  background: rgb(51, 93, 232);
+}
+
+.form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  color: rgb(94, 94, 94);
+}
+
+.form-group input,
+select,
+textarea {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  border: 2px solid rgb(192, 192, 192);
+  transition: ease-in 200ms;
+}
+
+.form-group .flex-wrapper {
+  display: flex;
+  align-items: center;
+  background: rgb(245, 245, 245);
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  height: 100%;
+  gap: 0.5rem;
+}
+
+.flex-wrapper > input#warna {
+  width: 100%;
+}
+
+.form-group input:focus-within,
+select:focus-within {
+  outline: 2px solid rgb(93, 112, 254);
+  outline-offset: 2px;
+}
+
+/*Animasi  */
+
+@keyframes putar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.star {
+  display: inline-block;
+  animation-name: putar;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* Media Query */
+
+@media (min-width: 570px) {
+  .form {
+    width: 90%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .form-wrapper {
+    width: 85vw;
+    margin-inline: auto;
+  }
+  .flex {
+    margin: 20px 3.5rem;
+  }
+}
